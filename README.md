@@ -11,6 +11,29 @@ Este proyecto tiene como objetivo servir como una base para aprender y practicar
 ![Home](home.jpg)
 Vista de inicio de la aplicación.
 
+## Diagrama de Arquitectura MVC
+
+```mermaid
+graph TD;
+Cliente-->|Solicitudes HTTP| Rutas;
+
+    subgraph MVC
+        Rutas-->|GET, POST, PUT, DELETE| Controladores;
+        Controladores-->|Lógica de negocio| Modelos;
+        Modelos-->|Datos simulados| BaseDeDatos;
+    end
+
+    Cliente-->|/estudiantes| Rutas;
+    Cliente-->|/cursos| Rutas;
+    Rutas-->|/estudiante/:id| Controladores;
+    Rutas-->|/curso/:id| Controladores;
+    Controladores-->|Respuestas JSON| Cliente;
+
+    BaseDeDatos["Estudiantes & Cursos (Datos simulados)"];
+    Controladores-->BaseDeDatos
+
+```
+
 ## Etapas y Ramas Disponibles
 
 El proyecto fue desarrollado en las siguientes etapas, cada una asociada a una rama en Git:
