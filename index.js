@@ -1,3 +1,6 @@
+// Cargar variables de entorno
+require("dotenv").config();
+
 // Importamos el módulo de Express
 const express = require("express");
 
