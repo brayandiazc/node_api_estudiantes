@@ -8,7 +8,7 @@ Este proyecto tiene como objetivo servir como una base para aprender y practicar
 
 ## Capturas de Pantalla del Proyecto
 
-![Home](home.png)
+![Home](home.jpg)
 Vista de inicio de la aplicación.
 
 ## Etapas y Ramas Disponibles
