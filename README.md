@@ -105,7 +105,7 @@ Este proyecto no incluye autenticación ni credenciales de acceso, ya que su pro
 
 ## Autor
 
-- [Tu Nombre](https://github.com/brayandiazc)
+- [Brayan Diaz C](https://github.com/brayandiazc)
 
 ## Licencia
 
@@ -113,4 +113,4 @@ Este proyecto está bajo la Licencia MIT - ve el archivo [LICENSE.md](LICENSE) p
 
 ---
 
-⌨️ con ❤️ por [Tu Nombre](https://github.com/brayandiazc) 😊
+⌨️ con ❤️ por [Brayan Diaz C](https://github.com/brayandiazc) 😊
