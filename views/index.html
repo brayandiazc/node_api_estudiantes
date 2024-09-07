@@ -4,75 +4,176 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>API UDD</title>
+    <title>API de Estudiantes y Cursos</title>
 
-    <!-- Importar PicoCSS -->
+    <!-- Importar NES.css -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+      href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Press Start 2P", cursive;
+        padding: 20px;
+      }
+      h1,
+      h2 {
+        margin-bottom: 20px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+      }
+      nav ul li {
+        display: inline-block;
+      }
+      section {
+        margin-top: 40px;
+      }
+    </style>
   </head>
-  <body class="container">
-    <!-- Header principal -->
+  <body>
+    <!-- Navbar -->
     <header>
-      <nav>
+      <nav class="nes-container is-rounded">
         <ul>
-          <li><strong>API de Estudiantes y Cursos</strong></li>
-          <li><a href="/estudiantes">Estudiantes</a></li>
-          <li><a href="/cursos">Cursos</a></li>
-          <li><a href="/api-docs">Documentación API (Swagger)</a></li>
+          <li><a href="/" class="nes-btn">Inicio</a></li>
+          <li><a href="/estudiantes" class="nes-btn">Usuarios</a></li>
+          <li><a href="/cursos" class="nes-btn">Cursos</a></li>
+          <li><a href="/api-docs" class="nes-btn is-primary">API Docs</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Sección principal con presentación -->
+    <br />
+    <!-- Header principal con nombre del proyecto y descripción -->
     <main>
-      <header>
-        <h1>Bienvenido a la API de Estudiantes y Cursos</h1>
+      <header class="nes-container with-title is-centered">
+        <h1 class="title">API de Estudiantes y Cursos</h1>
         <p>
-          Esta API permite gestionar y consultar información sobre estudiantes y
-          cursos.
+          Una API RESTful para gestionar estudiantes y cursos, con integración
+          Swagger y un despliegue en Vercel.
         </p>
-        <p>
-          También puedes acceder a la
-          <a href="/api-docs">documentación de la API</a> generada con Swagger
-          para obtener más detalles sobre cómo utilizarla.
-        </p>
+        <a
+          href="https://github.com/brayandiazc/node_api_estudiantes"
+          class="nes-btn is-primary"
+        >
+          Ver repositorio en GitHub
+        </a>
       </header>
-      <section>
-        <!-- Artículo de bienvenida con imagen -->
-        <article>
-          <h2>Acerca de este proyecto</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            id eros felis. Quisque nec scelerisque orci, vel commodo justo.
-            Integer sagittis nibh non urna finibus, ac vulputate mi lacinia.
-          </p>
 
-          <!-- Imagen de ejemplo -->
-          <img
-            src="https://via.placeholder.com/600x300"
-            alt="Imagen de ejemplo"
-          />
+      <!-- Sección con explicación del proyecto y sus etapas -->
+      <section class="nes-container with-title">
+        <h2 class="title">Etapas y Ramas Disponibles</h2>
 
-          <p>
-            Curabitur fermentum luctus nisl, sit amet vehicula justo facilisis
-            non. Nunc interdum nibh ac velit scelerisque, vel vehicula justo
-            varius. Suspendisse vulputate, libero vitae tincidunt vehicula,
-            lacus velit malesuada leo, a scelerisque neque sem et orci.
-          </p>
-        </article>
+        <p>
+          El proyecto fue desarrollado en las siguientes etapas, cada una
+          asociada a una rama en Git:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Etapa 1: </strong>
+            <a
+              href="https://github.com/brayandiazc/node_api_estudiantes/tree/etapa_1/crear_server"
+              >Crear el Servidor Básico</a
+            >
+            - Iniciamos el proyecto con Node.js y Express para levantar el
+            primer servidor básico.
+          </li>
+          <li>
+            <strong>Etapa 2: </strong>
+            <a
+              href="https://github.com/brayandiazc/node_api_estudiantes/tree/etapa_2/nodemon_y_nodenv"
+              >Configuración Inicial con Nodemon y dotenv</a
+            >
+            - Se agregaron nodemon y dotenv para mejorar el flujo de desarrollo
+            y configuración.
+          </li>
+          <li>
+            <strong>Etapa 3: </strong>
+            <a
+              href="https://github.com/brayandiazc/node_api_estudiantes/tree/etapa_3/api_v1"
+              >Implementar API v1 con Rutas y CRUD Parcial</a
+            >
+            - Se implementaron rutas iniciales para gestionar estudiantes y
+            cursos (solo lectura con GET).
+          </li>
+          <li>
+            <strong>Etapa 4: </strong>
+            <a
+              href="https://github.com/brayandiazc/node_api_estudiantes/tree/etapa_4/vista_index"
+              >Añadir Vistas HTML</a
+            >
+            - Se agregó una vista HTML para mostrar información básica en la
+            página de inicio, sirviendo el archivo desde la ruta raíz.
+          </li>
+          <li>
+            <strong>Etapa 5: </strong>
+            <a
+              href="https://github.com/brayandiazc/node_api_estudiantes/tree/etapa_5/simulacion_crud"
+              >Implementar CRUD Completo para Estudiantes y Cursos</a
+            >
+            - Se implementaron las operaciones completas de CRUD (Crear, Leer,
+            Actualizar, Eliminar) para estudiantes y cursos.
+          </li>
+          <li>
+            <strong>Etapa 6: </strong>
+            <a
+              href="https://github.com/brayandiazc/node_api_estudiantes/tree/etapa_6/modelo_vista_controlador"
+              >Aplicar el Patrón MVC</a
+            >
+            - Se reorganizó el proyecto siguiendo el patrón de arquitectura MVC
+            para separar la lógica en controladores, modelos y vistas.
+          </li>
+          <li>
+            <strong>Etapa 7: </strong>
+            <a
+              href="https://github.com/brayandiazc/node_api_estudiantes/tree/etapa_7/swangger"
+              >Integrar Swagger para Documentación de la API</a
+            >
+            - Se integró Swagger para documentar automáticamente la API. La
+            documentación está disponible en `/api-docs`.
+          </li>
+        </ul>
+
+        <h3>Despliegue</h3>
+        <p>
+          El proyecto ha sido desplegado exitosamente en Vercel. Puedes acceder
+          a la API y a su documentación de Swagger en los siguientes enlaces:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://node-api-estudiantes.vercel.app/"
+              class="nes-btn is-success"
+              >API en producción</a
+            >
+          </li>
+        </ul>
       </section>
     </main>
+    <br />
 
-    <!-- Footer con información adicional -->
-    <footer>
+    <!-- Footer -->
+    <footer class="nes-container is-dark">
       <p>
-        &copy; 2024 API de Estudiantes y Cursos - Proyecto educativo con Express
-        y Node.js. Puedes consultar la
-        <a href="/api-docs">documentación de la API</a> para obtener más
-        detalles.
+        &copy; 2024 por
+        <a href="https://brayandiazc.com">Brayan Diaz C</a> - Proyecto educativo
+        con Express y Node.js.
       </p>
+      <a
+        href="https://github.com/brayandiazc/node_api_estudiantes"
+        class="nes-btn is-primary"
+        >Ver repositorio en GitHub</a
+      >
     </footer>
   </body>
 </html>
