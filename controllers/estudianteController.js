@@ -114,6 +114,7 @@ const eliminarEstudiante = (req, res) => {
   res.json({ mensaje: `Estudiante con ID: ${id} eliminado exitosamente` });
 };
 
+// Exporta los métodos del controlador para ser utilizados en las rutas
 module.exports = {
   obtenerEstudiantes,
   obtenerEstudiantePorId,
